@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  background-color: lightgoldenrodyellow;
+  z-index: 1;
+}
+.nav-div {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+.nav-item {
+  font-size: 30px;
+}
+.cart-btn {
+  position: relative;
+  cursor: pointer;
+}
+.cart-item {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  padding: 0 4px;
+}
+.banner-section {
+  height: calc(100vh - 60px);
+  margin-top: -20px;
+  background: url("./images/hero-bcg.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner {
+  padding: 2rem;
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.banner .b-title {
+  text-transform: uppercase;
+  font-size: 3.4em;
+  font-family: "Roboto", sans-serif;
+  color: black;
+  letter-spacing: 3px;
+}
+.b-btn {
+  padding: 1rem 3rem;
+  text-transform: uppercase;
+  background-color: orange;
+  border: 1px solid orange;
+  font-size: 1rem;
+  color: black;
+  letter-spacing: 2.5px;
+  transition: background-color 0.3s linear;
+}
+.b-btn:hover {
+  background-color: transparent;
+  color: orange;
+}
+
+.products-section {
+  padding: 4em 0;
+}
+.section-title h2 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 5rem;
+}
+.products {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 27px;
+  padding: 0 3em;
+}
+.img-container {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.shop-btn {
+  background-color: orange;
+  text-transform: uppercase;
+  padding: 0.5rem 0.8rem;
+  color: black;
+  border: none;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  margin-top: 1rem;
+}
+.product-img {
+  display: block;
+  width: 100%;
+  height: 12em;
+  transition: all 0.2s ease-in;
+}
+.img-container:hover .product-img {
+  opacity: 0.8;
+}
+.shop-btn:hover {
+  color: white;
+}
+.icon {
+  margin-left: 1rem;
+  font-size: 16px;
+}
+.product1 {
+  text-align: center;
+}
+.product1 h3 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+.product1 h4 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: all o.3s linear;
+  background: rgb(240, 157, 81, 0.5);
+  visibility: hidden;
+  z-index: 2;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background: white;
+  z-index: 3;
+  background-color: white;
+  transition: all 0.3s linear;
+  transform: translateX(100%);
+}
+.showCart {
+  transform: translateX(0);
+}
+.transparent {
+  visibility: visible;
+}
+@media screen and (min-width: 760px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding-left: 25px;
+}
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 30px;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+.cart-content {
+  padding: 8px;
+}
+.cart-item1 {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+}
+.cart-item1 img {
+  width: 75px;
+  height: 75px;
+}
+.cart-item1 h4 {
+  text-transform: capitalize;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.cart-item1 h5 {
+  letter-spacing: 5px;
+  font-family: "Roboto", sans-serif;
+}
+.cart-item1 span {
+  color: grey;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+.item-amount {
+  text-align: center;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+  color: orange;
+  cursor: pointer;
+}
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: 5px;
+  text-align: center;
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+  font-family: "Roboto", sans-serif;
+}
